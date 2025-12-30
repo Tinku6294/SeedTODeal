@@ -31,16 +31,12 @@ This project demonstrates a **scalable, modular, and distributed architecture** 
 
 ## Tech Stack 🛠️
 
-- **Backend:** Java, Spring Boot, Spring WebFlux, Spring Security, JWT authentication
-- **Database:** MySQL/PostgreSQL (per microservice)
+- **Backend:** Java, Spring Boot, Spring Security, JWT authentication
+- **Database:** PostgreSQL (per microservice)
 - **API Gateway & Discovery:** Spring Cloud Gateway, Eureka
 - **Microservices Communication:** REST APIs
 - **Build Tools:** Maven
-- **Containerization & Deployment:** Docker, Kubernetes (optional)
 - **Version Control:** Git & GitHub
 - **Frontend (Optional):** Can be integrated with React / Angular / Flutter
 
 ---
-
-## Project Structure 📂
-
