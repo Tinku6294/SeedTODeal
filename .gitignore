@@ -1,0 +1,15 @@
+# IntelliJ / IDE
+.idea/
+*.iml
+
+# Java / Spring
+target/
+*.log
+
+# Environment files
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
