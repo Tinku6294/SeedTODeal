@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+        - id: user-service
+          uri: lb://user-service   # 👈 matches spring.application.name of User Service
+          predicates:
+            - Path=/api/user/**    # Gateway listens on /api/user/**
+          filters:
+            - StripPrefix=2        # removes /api/user before forwarding
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    gateway:
+      enabled: true
+
+info:
+  app:
+    name: gateway-service
+    description: "This is the API Gateway for microservices"
+    version: "1.0"
